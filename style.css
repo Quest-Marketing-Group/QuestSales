@@ -1,0 +1,19 @@
+body{
+    position: relative;
+    z-index: -1;
+}
+div{
+    position: relative;
+    margin: auto;
+    margin-top: 15%;
+    background-color: rgb(255, 255, 255);opacity: 95%;
+    width: 350px;
+    height: 350px;
+    z-index: 1;
+    text-align: center ;
+    border-radius: 25px;
+    border: 2px solid rgb(68, 58, 58);
+    
+    
+    
+}
