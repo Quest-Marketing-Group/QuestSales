@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/MakeAccount.css" />
+    <body background="../imgs/LoginBackground.jpg">
+        <main>
+            <form action="/users/register" method="POST"> 
+                <div class="container">
+                    <h1>Create New Account</h1>
+                <hr>
+                    <label for="username"><h2><b>Username:</b></h2>
+                    <input type="text" id="username" name="username" placeholder="Enter Username" required autocomplete="off" />
+                    
+                    <label for="password"><h3><b>Password:</b></h3></label>
+                    <input type="password" id ="password" name="password" placeholder="Enter Password" required/>
+
+                    <label for="confirm"><h3 class="confirm-password"><b>Confirm Password:</b></h3></label>
+                    <input type="password" id="confirm-password" name="confirm" placeholder="Enter Password" required/>
+                    
+                </hr>
+                <label id="message"></label>
+                <button type="submit" class="register-btn">Register</button>
+            </form>
+                <!-- <a href="/users/login">Login</a> -->
+            </div>
+            
+           
+            
+        </main>
+        <!-- <script src="../scripts/register.js"></script> -->
+    </body>
+
+</html> 
