@@ -1,9 +1,9 @@
 const chai = window.chai
 const expect = chai.expect
 
-describe('Test Login', () => {
-    it('should give the user the ability to log in', () => {
-        expect(login)
+describe('Create a new user', () => {
+    it('The user should be able to create a username and password', () => {
+        expect(handleNewUser())
     })
 })
 
