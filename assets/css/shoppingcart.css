@@ -208,7 +208,7 @@ label {
 .product .product-quantity input {
     width: 40px;
 }
-.product .remove-product {
+.product .remove-product-btn {
     border: 0;
     padding: 4px 8px;
     background-color: #c66;
@@ -217,7 +217,7 @@ label {
     font-size: 12px;
     border-radius: 3px;
 }
-.product .remove-product:hover {
+.product .remove-product-btn:hover {
     background-color: #a44;
 }
 

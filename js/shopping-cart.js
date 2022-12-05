@@ -5,11 +5,18 @@ var fadeTime = 300;
 
 
 /* Assign actions */
-$('.product-quantity input').change( function() {
-    updateQuantity(this);
-});
+//$('.product-quantity input').change( function() {
+//updateQuantity(this);
+//});
 
-$('.product-removal button').click( function() {
+$(document).on('click', '.update-quantity-product', function(e){
+
+    var vals =  $('input').val();
+    // alert(vals);
+    updateQuantity(vals, $('input'));
+})
+
+$('.remove-product-btn').click( function() {
     removeItem(this);
 });
 
@@ -46,7 +53,7 @@ function recalculateCart()
 
 
 /* Update quantity */
-function updateQuantity(quantityInput)
+function updateQuantity(qty, quantityInput)
 {
     /* Calculate line price */
     var productRow = $(quantityInput).parent().parent();
