@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Quest Sales Refund Page"/>
+    <meta name="author" content="Quest Sales"/>
+    <title>Quest Sales Refund Page</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/refund.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+<script src="js/shopping-cart.js"></script>
+
+<body cz-shortcut-listen="true">
+    <div class="content-bg"></div>
+    <div class="content">
+      <header class="custom-header clearfix">
+        <style>
+          .form-container {
+              background-position: 35% 80%;
+          }
+          .start-return-btn {
+              font-family: Knockout-71-A,Impact,Charcoal,sans-serif;
+              font-weight: 400;
+              font-style: normal;
+              letter-spacing: 1px;
+              text-transform: uppercase;
+              vertical-align: middle;
+              margin: 0 0 1rem 0;
+              padding: .85em 1em;
+              -webkit-appearance: none;
+              border: 1px solid transparent;
+              border-radius: 0;
+              transition: background-color .25s ease-out,color .25s ease-out;
+              font-size: 1.5rem;
+              line-height: 1;
+              text-align: center;
+              cursor: pointer;
+              background-color: #e31d1a;
+              color: #fefefe;
+          }
+          
+          .rounded{
+              border:2px solid #202020;
+              color: #202020;
+          }
+          
+          .line-mask .line{
+              background-color:#202020;
+          }
+          
+          
+          .rounded .arrow{
+              color:#202020;
+          }
+          
+          .returns-questions {
+              background-color:#eeeeee;
+              padding: 5% 0;
+          }
+          
+          .rc-title {
+              font-family: Knockout-69-A, Impact, Charcoal, sans-serif;
+              font-size: 3.6rem;
+              font-weight: 400;
+              color: #202020;
+              text-align: center;
+              text-transform:uppercase;
+          }
+          
+          a .rc-link {
+              font-family:Benton-Sans;
+              color:#FFF;
+              font-size:15px;
+              font-weight:300;
+              letter-spacing: .5px;
+          }
+          
+          .f-half h2 {
+              font-family: Benton-Sans, "Helvetica Neue", Hsans-serifoboto, Arial, sans-serif;
+              font-size: 16px;
+              font-weight: 600;
+              color: #202020;
+              text-align: left;
+              text-transform:uppercase;
+          }
+        </style>
+      </header>
+  
+      <section class="rc-section form-container">
+        <h1 class="rc-title">RETURNS</h1>
+  
+        <div class="start-return-form">
+          <form action="/return/start/" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="6PLkg5KO7R5yeLd/TueIbHd6bpxge9thV7FDXtFDQcxxUekTjodLru8BOOA9AGcTmNfDtJh6N+Sz2ghbiPq9mQ==">
+            <input type="email" placeholder="Enter your email" name="customer_email" required="required">
+            <input type="submit" name="commit" value="Start a Return" data-disable-with="Start a Return" class="start-return-btn">
+          </form>
+        </div>
+      </section>
+      <section id="how-works" class="rc-section how-works">
+  
+        <h1 class="rc-title">How it Works</h1>
+  
+        <div class="content">
+          <div class="line-wrap">
+            <div class="line-mask">
+              <div id="line" class="line"></div>
+            </div>
+          </div>
+  
+          <article class="hw-step three-steps">
+            <div class="rounded">
+              <i class="fa fa-hand-o-up"></i>
+            </div>
+            <p>Select items to return</p>
+          </article>
+  
+          <article class="hw-step three-steps">
+            <div class="rounded">
+              <i class="fa fa-usd"></i>
+            </div>
+            <p>Get a refund confirmation</p>
+          </article>
+  
+          <article class="hw-step three-steps">
+            <div class="rounded">
+              <i class="fa fa-truck"></i>
+              <i class="arrow arrow3 fa fa-chevron-right"></i>
+            </div>
+            <p>Send the return back to us</p>
+          </article>
+        </div>
+      </section>
+      <section id="crq" class="rc-section returns-questions">
+  
+        <h1 class="rc-title">Common Returns Questions</h1>
+  
+        <div class="content">
+          <div class="f-half">
+            <h2>What's your return policy?</h2>
+            <p>We don't want you to have anything that you aren't completely satisfied with. If you'd like to send something back to us any time, for any reason, please follow the return instructions. We'll completely refund your original form
+              of payment (excluding shipping charges) when we receive the return.</p>
+            <h2>What's your exchange policy?</h2>
+            <p>We don't process direct exchanges, and ask that if you'd like a replacement item you follow our return instructions and reorder directly through our website as a separate transaction. We'll completely refund your original form of payment (excluding
+              shipping charges) when we receive the return.</p>
+          </div>
+  
+          <div class="f-half">
+            <h2>How long will my refund take?</h2>
+            <p>Up to 5 business days.</p>
+        </div>
+      </section>
+    </div>
+  </body>
