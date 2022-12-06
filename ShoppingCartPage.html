@@ -1,201 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="description" content="Quest Sales Shopping Cart Page"/>
-  <meta name="author" content="Quest Sales"/>
-  <title>Quest Sales Shopping Cart Page</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Quest Sales Shopping Cart Page"/>
+    <meta name="author" content="Quest Sales"/>
+    <title>Quest Sales Shopping Cart Page</title>
 
-  <!-- CSS Files -->
-  <link rel="stylesheet" href="assets/css/shoppingcart.css">
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/shoppingcart.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
 <body>
+<script src="js/shopping-cart.js"></script>
 
 <style>
-  body {
-    background-image: url("assets/images/LoginBackground.jpg");
-  }
+    body {
+        background-image: url("assets/images/LoginBackground.jpg");
+    }
 </style>
 
 <header>
-  <nav>
-    <a href="LogInPage.html">Login</a>
-    <form action="">
-      <input type="text">
-    </form>
-    <h2><a href="index.html">Quest Sales</a></h2>
-    <ul>
-      <li><a href="ProductsPage.html">Discover</a></li>
-      <li><a href="ShoppingCartPage.html">Cart</a></li>
-    </ul>
-  </nav>
+    <nav>
+        <a href="LogInPage.html">Login</a>
+        <form action="">
+            <input type="text">
+        </form>
+        <h2><a href="index.html">Quest Sales</a></h2>
+        <ul>
+            <li><a href="ProductsPage.html">Discover</a></li>
+            <li><a href="ShoppingCartPage.html">Cart</a></li>
+        </ul>
+    </nav>
 </header>
-<script type="text/javascript" src="js/shopping-cart.js"></script>
-<h1 class = "lg-title">Shopping Cart</h1>
+
+<h1>Shopping Cart</h1>
 <div class="shopping-background">
-<div class="shopping-cart">
+    <div class="shopping-cart">
 
-  <div class="column-labels">
-    <label class="product-image">Image</label>
-    <label class="product-details">Product</label>
-    <label class="product-price">Price</label>
-    <label class="product-quantity">Quantity</label>
-    <label class="product-removal">Remove</label>
-    <label class="product-line-price">Total</label>
-  </div>
+        <div class="column-labels">
+            <label class="product-image">Image</label>
+            <label class="product-details">Product</label>
+            <label class="product-price">Price</label>
+            <label class="product-quantity">Quantity</label>
+            <label class="product-removal">Remove</label>
+            <label class="product-line-price">Total</label>
+        </div>
 
-  <div class="product">
-    <div class="product-image">
-      <img src="assets/images/jacket.jpg">
-    </div>
-    <div class="product-details">
-      <div class="product-title">Green Jacket</div>
-      <p class="product-description"></p>
-    </div>
-    <div class="product-price">14.99</div>
-    <div class="product-quantity">
-      <input type="number" value="2" min="1">
-    </div>
-    <div class="product-removal">
-      <button class="remove-product-btn">
-        Remove
-      </button>
-      <button class="update-quantity-product" type="button">Update</button>
-    </div>
-    <div class="product-line-price">25.98</div>
-  </div>
+        <div class="product">
+            <div class="product-image">
+                <img src="assets/images/jacket.jpg">
+            </div>
+            <div class="product-details">
+                <div class="product-title">Green Jacket</div>
+                <p class="product-description"></p>
+            </div>
+            <div class="product-price">
+                <span class="item_price">14.99</span>
+            </div>
+            <div class="product-quantity">
+                <input type="number" class="num" oninput="calc(0)" min="1" max="1000" value="1"/>
+            </div>
+            <div class="product-removal">
+                <button class="remove-product-btn">
+                    Remove
+                </button>
+            </div>
+            <div class="product-line-price">
+                <span class="product-total">14.99</span>
+            </div>
+        </div>
 
-  <div class="product">
-    <div class="product-image">
-      <img src="assets/images/shoes.jpg">
-    </div>
-    <div class="product-details">
-      <div class="product-title">Purple Shoes</div>
-      <p class="product-description"></p>
-    </div>
-    <div class="product-price">39.99</div>
-    <div class="product-quantity">
-      <input type="number" value="1" min="1">
-    </div>
-    <div class="product-removal">
-      <button class="remove-product-btn">
-        Remove
-      </button>
-      <button class="update-quantity-product" type="button">Update</button>
-    </div>
-    <div class="product-line-price">45.99</div>
-  </div>
+        <div class="product">
+            <div class="product-image">
+                <img src="assets/images/shoes.jpg">
+            </div>
+            <div class="product-details">
+                <div class="product-title">Purple Shoes</div>
+                <p class="product-description"></p>
+            </div>
+            <div class="product-price">
+                <span class="item_price">39.99</span>
+            </div>
+            <div class="product-quantity">
+                <input type="number" class="num" oninput="calc(1)" min="1" max="1000" value="1"/>
+            </div>
+            <div class="product-removal">
+                <button class="remove-product-btn">
+                    Remove
+                </button>
+            </div>
+            <div class="product-line-price">
+                <b><span class="product-total">39.99</span></b>
+            </div>
+        </div>
 
-  <div class="totals">
-    <div class="totals-item">
-      <label>Subtotal</label>
-      <div class="totals-value" id="cart-subtotal">71.97</div>
+        <div class="totals">
+            <div class="totals-item">
+                <label>Subtotal</label>
+                <div class="totals-value" id="cart-subtotal">
+                    <b><span class="total">0</span></b>
+                </div>
+            </div>
+            <div class="totals-item">
+                <label>Tax (5%)</label>
+                <div class="totals-value" id="cart-tax">3.60</div>
+            </div>
+            <div class="totals-item">
+                <label>Shipping</label>
+                <div class="totals-value" id="cart-shipping">15.00</div>
+            </div>
+            <div class="totals-item totals-item-total">
+                <label>Grand Total</label>
+                <div class="totals-value" id="cart-total">90.57</div>
+            </div>
+        </div>
+        <button class="checkout">Checkout</button>
     </div>
-    <div class="totals-item">
-      <label>Tax (5%)</label>
-      <div class="totals-value" id="cart-tax">3.60</div>
-    </div>
-    <div class="totals-item">
-      <label>Shipping</label>
-      <div class="totals-value" id="cart-shipping">15.00</div>
-    </div>
-    <div class="totals-item totals-item-total">
-      <label>Grand Total</label>
-      <div class="totals-value" id="cart-total">90.57</div>
-    </div>
-  </div>
-
-  <button class="checkout">Checkout</button>
-
 </div>
-</div>
-<script type="text/javascript" src="js/shopping-cart.js">
-  /* Set rates + misc */
-  var taxRate = 0.05;
-  var shippingRate = 15.00;
-  var fadeTime = 300;
-
-
-  /* Assign actions */
-  //$('.product-quantity input').change( function() {
-  //updateQuantity(this);
-  //});
-
-  $(document).on('click', '.update-quantity-product', function(e){
-
-    var vals =  $('input').val();
-    // alert(vals);
-    updateQuantity(vals, $('input'));
-  })
-
-  $('.remove-product-btn').click( function() {
-    removeItem(this);
-  });
-
-
-  /* Recalculate cart */
-  function recalculateCart()
-  {
-    var subtotal = 0;
-
-    /* Sum up row totals */
-    $('.product').each(function () {
-      subtotal += parseFloat($(this).children('.product-line-price').text());
-    });
-
-    /* Calculate totals */
-    var tax = subtotal * taxRate;
-    var shipping = (subtotal > 0 ? shippingRate : 0);
-    var total = subtotal + tax + shipping;
-
-    /* Update totals display */
-    $('.totals-value').fadeOut(fadeTime, function() {
-      $('#cart-subtotal').html(subtotal.toFixed(2));
-      $('#cart-tax').html(tax.toFixed(2));
-      $('#cart-shipping').html(shipping.toFixed(2));
-      $('#cart-total').html(total.toFixed(2));
-      if(total == 0){
-        $('.checkout').fadeOut(fadeTime);
-      }else{
-        $('.checkout').fadeIn(fadeTime);
-      }
-      $('.totals-value').fadeIn(fadeTime);
-    });
-  }
-
-
-  /* Update quantity */
-  function updateQuantity(qty, quantityInput)
-  {
-    /* Calculate line price */
-    var productRow = $(quantityInput).parent().parent();
-    var price = parseFloat(productRow.children('.product-price').text());
-    var quantity = $(quantityInput).val();
-    var linePrice = price * quantity;
-
-    /* Update line price display and recalc cart totals */
-    productRow.children('.product-line-price').each(function () {
-      $(this).fadeOut(fadeTime, function() {
-        $(this).text(linePrice.toFixed(2));
-        recalculateCart();
-        $(this).fadeIn(fadeTime);
-      });
-    });
-  }
-
-
-  /* Remove item from cart */
-  function removeItem(removeButton)
-  {
-    /* Remove row from DOM and recalc cart total */
-    var productRow = $(removeButton).parent().parent();
-    productRow.slideUp(fadeTime, function() {
-      productRow.remove();
-      recalculateCart();
-    });
-  }
-
-</script>
 </body>
 </html>
 
