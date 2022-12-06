@@ -100,7 +100,7 @@
                                 <img src = "assets/images/shoes.jpg" alt = "product image">
                             </div>
                             <div class = "product-btns">
-                                <button type = "button" class = "btn-cart"> add to cart
+                                <button type = "button" class = "btn-cart" onclick="addToCart(0)"> add to cart
                                     <span><i class = "fas fa-plus"></i></span>
                                 </button>
                                 <button type = "button" class = "btn-buy"> buy now
@@ -217,6 +217,34 @@
     }
     </script>
 
+<script>
+    function addToCart(element) {
+        var productParent = $(element).closest('div.product-item');
+
+        var price = $(productParent).find('.product-price').text();
+        var productName = $(productParent).find('.product-name').text();
+        var quantity = $(productParent).find('.product-quantity').val();
+
+        var cartItem = {
+            productName: productName,
+            price: price,
+            quantity: quantity
+        };
+        var cartItemJSON = JSON.stringify(cartItem);
+
+        var cartArray = new Array();
+        // If javascript shopping cart session is not empty
+        if (sessionStorage.getItem('shopping-cart')) {
+            cartArray = JSON.parse(sessionStorage.getItem('shopping-cart'));
+        }
+        cartArray.push(cartItemJSON);
+
+        var cartJSON = JSON.stringify(cartArray);
+        sessionStorage.setItem('shopping-cart', cartJSON);
+        showCartTable();
+    }
+
+</script>
 
 
 

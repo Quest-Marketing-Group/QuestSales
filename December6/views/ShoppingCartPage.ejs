@@ -1,5 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="Quest Sales Shopping Cart Page"/>
+    <meta name="author" content="Quest Sales"/>
+    <title>Quest Sales Shopping Cart Page</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/shoppingcart.css">
+
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+<script src="js/shopping-cart.js"></script>
+
+<style>
+    body {
+        background-image: url("assets/images/LoginBackground.jpg");
+    }
+</style>
+
+<header>
+    <nav>
+        <a href="LogInPage.html">Login</a>
+        <form action="">
+            <input type="text">
+        </form>
+        <h2><a href="index.html">Quest Sales</a></h2>
+        <ul>
+            <li><a href="ProductsPage.html">Discover</a></li>
+            <li><a href="ShoppingCartPage.html">Cart</a></li>
+        </ul>
+    </nav>
+</header>
+
+<h1>Shopping Cart</h1>
+<div class="shopping-background">
+    <div class="shopping-cart">
+
+        <div class="column-labels">
+            <label class="product-image">Image</label>
+            <label class="product-details">Product</label>
+            <label class="product-price">Price</label>
+            <label class="product-quantity">Quantity</label>
+            <label class="product-removal">Remove</label>
+            <label class="product-line-price">Total</label>
+        </div>
+
+        <div class="product">
+            <div class="product-image">
+                <img src="assets/images/jacket.jpg">
+            </div>
+            <div class="product-details">
+                <div class="product-title">Green Jacket</div>
+                <p class="product-description"></p>
+            </div>
+            <div class="product-price">
+                <span class="item_price">14.99</span>
+            </div>
+            <div class="product-quantity">
+                <input type="number" class="num" oninput="calc(0)" min="1" max="1000" value="1"/>
+            </div>
+            <div class="product-removal">
+                <button class="remove-product-btn">
+                    Remove
+                </button>
+            </div>
+            <div class="product-line-price">
+                <span class="product-total">14.99</span>
+            </div>
+        </div>
+
+        <div class="product">
+            <div class="product-image">
+                <img src="assets/images/shoes.jpg">
+            </div>
+            <div class="product-details">
+                <div class="product-title">Purple Shoes</div>
+                <p class="product-description"></p>
+            </div>
+            <div class="product-price">
+                <span class="item_price">39.99</span>
+            </div>
+            <div class="product-quantity">
+                <input type="number" class="num" oninput="calc(1)" min="1" max="1000" value="1"/>
+            </div>
+            <div class="product-removal">
+                <button class="remove-product-btn">
+                    Remove
+                </button>
+            </div>
+            <div class="product-line-price">
+                <b><span class="product-total">39.99</span></b>
+            </div>
+        </div>
+
+        <div class="totals">
+            <div class="totals-item">
+                <label>Subtotal</label>
+                <div class="totals-value" id="cart-subtotal">
+                    <b><span class="total">0</span></b>
+                </div>
+            </div>
+            <div class="totals-item">
+                <label>Tax (5%)</label>
+                <div class="totals-value" id="cart-tax">3.60</div>
+            </div>
+            <div class="totals-item">
+                <label>Shipping</label>
+                <div class="totals-value" id="cart-shipping">15.00</div>
+            </div>
+            <div class="totals-item totals-item-total">
+                <label>Grand Total</label>
+                <div class="totals-value" id="cart-total">90.57</div>
+            </div>
+        </div>
+        <button class="checkout">Checkout</button>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8"/>
     <meta name="description" content="Quest Sales Shopping Cart Page"/>
@@ -10,6 +135,7 @@
     <link rel="stylesheet" href="/styles/shoppingcart.css">
     <link rel="stylesheet" href="/styles/Search_Bar.css">
     <link rel="stylesheet" href="/styles/header.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   </head>
   <header>
     <div class="upper">
@@ -22,7 +148,7 @@
       <button class="search-btn" type="submit">Search</button>
     </div>
     <div class="title"><a href="/">Quest Sales</a></div>
-        <div class="discover"><a href="/user/product">Discover</a></div>
+        <div class="discover"><a href="/product">Discover</a></div>
         <div class="cart"><a href="/user/cart">Cart</a></div>
     </div>
   </header>
@@ -68,7 +194,7 @@
           </div>
           <div class="product-price">39.99</div>
           <div class="product-quantity">
-            <input type="number" value="1" min="1">
+            <input class="quantity" type="number" value="1" min="1">
           </div>
           <div class="product-removal">
             <button class="remove-product-btn">
@@ -105,4 +231,4 @@
 </html>
 
 
-
+ -->

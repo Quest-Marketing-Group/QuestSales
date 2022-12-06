@@ -11,12 +11,7 @@ var fadeTime = 300;
 //updateQuantity(this);
 //});
 
-$(document).on('click', '.update-quantity-product', function(e){
 
-    var vals =  $('input').val();
-    // alert(vals);
-    updateQuantity(vals, $('input'));
-})
 
 $('.remove-product-btn').click( function() {
     removeItem(this);
@@ -79,16 +74,18 @@ function calc(n) {
     var total = parseFloat(price) * noTickets;
     if (!isNaN(total))
         document.getElementsByClassName("product-total")[n].innerHTML = total;
+    recalculateCart();
 }
 
 
 /* Remove item from cart */
-function removeItem(removeButton)
+function removeItem(n)
 {
     /* Remove row from DOM and recalc cart total */
-    var productRow = $(removeButton).parent().parent();
+    var productRow = document.getElementsByClassName("product-title")[n].innerHTML;
+
     productRow.slideUp(fadeTime, function() {
         productRow.remove();
-        recalculateCart();
+
     });
 }

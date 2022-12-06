@@ -53,6 +53,7 @@ app.use('/register', require('./routes/register'));
 app.use('/login', require('./routes/auth'));
 app.use('/refresh', require('./routes/refresh'));
 app.use('/logout', require('./routes/logout'));
+app.use('/cart', require('./routes/cart'))
 app.get('/product', (req, res) => {
     res.render('ProductsPage.ejs')
 })
