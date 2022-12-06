@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="description" content="Quest Sales Products Page"/>
+        <meta name="author" content="Quest Sales"/>
+        <title>Quest Sales Products Page</title>
+
+    <!-- CSS Files -->
+        <link rel="stylesheet" href="/styles/products.css">
+        <link rel="stylesheet" href="/styles/Search_Bar.css">
+        <link rel="stylesheet" href="/styles/header.css">
+<!--    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"-->
+<!--        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">-->
+    </head>
+        <header>
+            <div class="upper">
+            <div class="loginlink"><a href="/login">Login</a></div>
+            <div class="search">
+                <form class="search-form" action="." method="post" autocomplete="off">
+                    <input class="search-term" type="text" placeholder="" />
+                    <ul class="list"></ul>                   
+                </form>
+                <button class="search-btn" type="submit">Search</button>
+            </div>
+            <div class="title"><a href="/">Quest Sales</a></div>
+            <div class="discover"><a href="/product">Discover</a></div>
+            <div class="cart"><a href="/user/cart">Cart</a></div>
+            </div>
+        </header>
+        <body background="../imgs/LoginBackground.jpg">
+            <div class = "products">
+                <div class = "container">
+                    <h1 class = "lg-title">Products</h1>
+<!--        <p class = "text-light">Random text.</p>-->
+
+                    <div class = "product-items">
+                        <div class = "product">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "/imgs/jacket.jpg" alt = "product image">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-cart"> add to cart
+                                        <span><i class = "fas fa-plus"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-buy"> buy now
+                                        <span><i class = "fas fa-shopping-cart"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">clothing</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">green jacket</a>
+                                <p class = "product-price">$ 29.99</p>
+                                <p class = "product-price">$ 14.99</p>
+                            </div>
+                        </div>
+                        <div class = "product">
+                            <div class = "product-content">
+                                <div class = "product-img">
+                                    <img src = "/imgs/shoes.jpg" alt = "product image">
+                                </div>
+                                <div class = "product-btns">
+                                    <button type = "button" class = "btn-cart"> add to cart
+                                        <span><i class = "fas fa-plus"></i></span>
+                                    </button>
+                                    <button type = "button" class = "btn-buy"> buy now
+                                        <span><i class = "fas fa-shopping-cart"></i></span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class = "product-info">
+                                <div class = "product-info-top">
+                                    <h2 class = "sm-title">shoes</h2>
+                                    <div class = "rating">
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "fas fa-star"></i></span>
+                                        <span><i class = "far fa-star"></i></span>
+                                    </div>
+                                </div>
+                                <a href = "#" class = "product-name">purple shoes</a>
+                                <p class = "product-price">$ 49.99</p>
+                                <p class = "product-price">$ 39.99</p>
+                            </div>
+                        </div>
+            
+                    </div>
+                </div>
+            </div>
+            <script src="/scripts/Search_Bar.js"></script>
+        </body>
+    </html>

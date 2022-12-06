@@ -1,0 +1,54 @@
+.container {
+    padding: 20px;
+    height: auto;
+}
+
+h2 {
+    margin: top 10%;
+    font-size: 16px;
+    margin-left: -31%;
+}
+
+h3 {
+    font-size: 16px; 
+    margin-left: -32%;
+    padding-top: -2pt;
+}
+
+#username {
+    width: 50%;
+    height: 30px;
+    margin-top: -10%;
+}
+
+#password, #confirm-password{
+    width: 50%;
+    height: 30px;
+    margin-top: -10%;
+}
+
+.confirm-password{
+    font-size: 16px; 
+    margin-left: -14%;
+    padding-top: -2pt;
+}
+
+.register-btn {
+    background-color: rgb(122, 55, 124);
+    height: 35px;
+    width: 200px;
+    margin-top: 5%;
+    border: 0px; 
+    border-radius: 10px;
+}
+
+.title {
+    text-align: center; 
+    font-size: 40px;
+    padding-top: 2%;
+    
+}
+
+.title > a {
+    text-decoration: none;
+}

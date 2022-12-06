@@ -1,0 +1,118 @@
+
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body{
+    position: relative;
+    z-index: -1;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+header {
+    width:100%;
+    border-radius: 0%;
+    margin: 0%;
+    height: 120px;
+    background-color: white;
+    opacity: 80%;
+    color: black;
+}
+
+nav > * {
+    float: left;
+    width: 10%;
+    margin: 0 5%;
+    list-style: none;
+}
+
+nav li{
+    float: left;
+    width: 50%;
+}
+
+
+/* .container {
+    position: relative;
+    margin: auto;
+    margin-top: 15%;
+    background-color: rgb(255, 255, 255);
+    opacity: 95%;
+    width: 350px;
+    height: 350px;
+    z-index: 1;
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid rgb(68, 58, 58);
+} */
+
+.upper {
+    display: inline-flex;
+    width: 100%;
+    padding-top: 0.5rem;
+    height: 100%;
+}
+
+.loginlink {
+    width: auto;
+    margin-left: 4rem;  
+}
+
+.loginlink > a {
+    text-decoration: none;
+}
+
+.search {
+    
+    margin-left: 10rem;
+}
+
+
+
+.title {
+   
+    margin-left: 7rem;
+    font-size:30px;
+}
+
+.title > a {
+    text-decoration: none;
+}
+
+.product {
+    margin-left: 24rem;
+}
+
+.product > a {
+    text-decoration: none;
+}
+
+.cart {
+    margin-left: 4rem;
+}
+
+.cart > a {
+    text-decoration: none;
+}
