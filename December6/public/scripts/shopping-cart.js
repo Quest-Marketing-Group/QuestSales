@@ -71,6 +71,15 @@ function updateQuantity(qty, quantityInput)
     });
 }
 
+function calc(n) {
+    var price = document.getElementsByClassName("item_price")[n].innerHTML;
+    var noTickets = document.getElementsByClassName("num")[n].value;
+    var total = parseFloat(price) * noTickets;
+    if (!isNaN(total))
+        document.getElementsByClassName("product-total")[n].innerHTML = total;
+    recalculateCart();
+}
+
 
 /* Remove item from cart */
 function removeItem(removeButton)
