@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="/styles/style.css" />
+        <link rel="stylesheet" href="/styles/MakeAccount.css" />
+        <link rel="stylesheet" href="/styles/header.css">
+        <title>Sign in to gain access</title>
+    </head>
+    <header> 
+        <div class="title"><a href="/">Quest Sales</a></div>
+    </header>
+    <body background="/imgs/LoginBackground.jpg">
+        <main>
+            <div class="logIncontainer">
+                <h1>Create New Account</h1>
+                <% if (message.length > 0) { %>
+                    <b><%= message %></b>
+                <% } %>
+                <hr></hr>
+                <form action="/register" method="POST"> 
+                    <label for="username"><h2><b>Username:</b></h2>
+                    <input type="text" id="username" name="username" placeholder="Enter Username" required autocomplete="off" />
+                    
+                    <label for="password"><h3><b>Password:</b></h3></label>
+                    <input type="password" id ="password" name="password" placeholder="Enter Password" required/>
+
+                    <label for="confirm"><h3 class="confirm-password"><b>Confirm Password:</b></h3></label>
+                    <input type="password" id="confirm-password" name="confirm" placeholder="Enter Password" required/>
+                                            
+                    <label id="message"></label>
+                    <button type="submit" class="register-btn">Register</button>           
+                    <h4>Already have an account? <a href="/login">Login</a></h4>
+                </form>
+            </div>           
+        </main>
+    </body>
+</html> 
